@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Learn the basics of how computers work with simple explanations and a quick quiz.">
+  <title>ByteSize | Computers Made Simple</title>
+  <style>
+    :root{font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#e7ebf7;background:#0c1222;scroll-behavior:smooth}
+    *{box-sizing:border-box}body{margin:0;line-height:1.65}
+    a{color:inherit;text-decoration:none}header{border-bottom:1px solid #26314a;background:#0e1628}
+    .wrap{max-width:1040px;margin:auto;padding:0 22px}
+    nav{min-height:75px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .logo{font-size:1.35rem;font-weight:900;letter-spacing:-.7px}.logo span{color:#6bdbcc}
+    nav .links{display:flex;gap:24px;font-size:.92rem;color:#bcc7da}
+    .hero{padding:95px 0 85px;text-align:center;background:radial-gradient(ellipse at top,#1a3554 0%,#0c1222 68%)}
+    .eyebrow{color:#79e4d5;letter-spacing:.18em;text-transform:uppercase;font-weight:800;font-size:.75rem}
+    h1{font-size:clamp(2.3rem,6vw,4.6rem);line-height:1.1;letter-spacing:-2px;margin:16px 0}
+    .hero p{max-width:590px;margin:0 auto 28px;color:#bac8de;font-size:1.08rem}
+    .btn{display:inline-block;border:0;border-radius:12px;padding:13px 22px;background:#71e1cd;color:#092026;font-weight:800;cursor:pointer;font-size:1rem}
+    .btn:hover{background:#96f3df}.section{padding:65px 0}h2{font-size:2rem;margin:0 0 12px;letter-spacing:-.8px}
+    .intro{color:#adbcd4;max-width:640px;margin:0 0 28px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:#151e32;border:1px solid #2a3751;border-radius:18px;padding:24px}
+    .symbol{font-size:2rem}.card h3{margin:12px 0 8px}.card p{margin:0;color:#b5c3d9;font-size:.97rem}
+    .fact{background:#162b36;border-left:4px solid #71e1cd;border-radius:12px;padding:22px 26px;margin-top:26px}
+    .quiz{background:#131e31;border-top:1px solid #26314a;border-bottom:1px solid #26314a}
+    fieldset{border:0;padding:0;margin:26px 0}legend{font-size:1.15rem;font-weight:750;margin-bottom:12px}
+    .choice{display:block;border:1px solid #34435d;border-radius:11px;padding:12px 16px;margin:9px 0;cursor:pointer;background:#1b2940}
+    .choice:has(input:checked){border-color:#71e1cd;background:#203d47}
+    .choice input{accent-color:#71e1cd;margin-right:10px}
+    #result{margin-top:15px;font-weight:700;min-height:28px}
+    footer{padding:30px 0;color:#90a2be;text-align:center;font-size:.85rem}
+    @media(max-width:750px){.cards{grid-template-columns:1fr}nav .links{gap:12px}.hero{padding:70px 0}h1{letter-spacing:-1px}}
+  </style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+  <a class="logo" href="#top">Byte<span>Size</span>.</a>
+  <div class="links"><a href="#learn">Learn</a><a href="#quiz">Quiz</a></div>
+</nav></div></header>
+<main id="top">
+  <section class="hero"><div class="wrap">
+    <div class="eyebrow">A mini learning website</div>
+    <h1>Computers, made simple.</h1>
+    <p>Ever wondered what actually happens inside your computer? Explore the main parts in just a few minutes.</p>
+    <a class="btn" href="#learn">Start learning ↓</a>
+  </div></section>
+  <section class="section wrap" id="learn">
+    <h2>Meet the main components</h2>
+    <p class="intro">A computer has several parts that work together to run programs, show graphics, and store information.</p>
+    <div class="cards">
+      <article class="card"><div class="symbol" aria-hidden="true">🧠</div><h3>CPU</h3><p>The central processing unit follows instructions and performs calculations. You can think of it as the computer's main processor.</p></article>
+      <article class="card"><div class="symbol" aria-hidden="true">⚡</div><h3>RAM</h3><p>Random access memory temporarily holds information that active programs need. Its contents are usually lost when the power turns off.</p></article>
+      <article class="card"><div class="symbol" aria-hidden="true">💾</div><h3>Storage</h3><p>An SSD or hard drive keeps files, apps, and the operating system even after you shut down your computer.</p></article>
+      <article class="card"><div class="symbol" aria-hidden="true">🎮</div><h3>GPU</h3><p>The graphics processing unit helps draw images and video, and speeds up certain kinds of parallel calculations.</p></article>
+      <article class="card"><div class="symbol" aria-hidden="true">🔌</div><h3>Motherboard</h3><p>The main circuit board connects the CPU, memory, storage, and other components so they can communicate.</p></article>
+      <article class="card"><div class="symbol" aria-hidden="true">🔢</div><h3>Binary</h3><p>Computers represent information using bits: zeros and ones. Groups of bits can represent numbers, letters, pictures, and more.</p></article>
+    </div>
+    <aside class="fact"><strong>Fun fact:</strong> A byte usually contains 8 bits. That's why the site's called ByteSize!</aside>
+  </section>
+  <section class="section quiz" id="quiz"><div class="wrap">
+    <h2>Quick knowledge check</h2><p class="intro">Try these three questions to see what you learned.</p>
+    <form id="quizForm">
+      <fieldset><legend>1. Which part executes instructions?</legend>
+        <label class="choice"><input type="radio" name="q1" value="a" required>CPU</label>
+        <label class="choice"><input type="radio" name="q1" value="b">SSD</label>
+        <label class="choice"><input type="radio" name="q1" value="c">Monitor</label>
+      </fieldset>
+      <fieldset><legend>2. What normally happens to RAM data when power turns off?</legend>
+        <label class="choice"><input type="radio" name="q2" value="a" required>It's saved permanently</label>
+        <label class="choice"><input type="radio" name="q2" value="b">It's lost</label>
+        <label class="choice"><input type="radio" name="q2" value="c">It moves to the GPU</label>
+      </fieldset>
+      <fieldset><legend>3. How many bits are in a byte?</legend>
+        <label class="choice"><input type="radio" name="q3" value="a" required>2</label>
+        <label class="choice"><input type="radio" name="q3" value="b">4</label>
+        <label class="choice"><input type="radio" name="q3" value="c">8</label>
+      </fieldset>
+      <button class="btn" type="submit">Check my answers</button>
+      <p id="result" role="status" aria-live="polite"></p>
+    </form>
+  </div></section>
+</main>
+<footer><div class="wrap">ByteSize — a simple educational demo made with HTML, CSS & JavaScript.</div></footer>
+<script>
+  document.getElementById('quizForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const data = new FormData(this);
+    const answers = {q1:'a',q2:'b',q3:'c'};
+    const score = Object.keys(answers).filter(key => data.get(key) === answers[key]).length;
+    document.getElementById('result').textContent = 'You scored ' + score + '/3! ' + (score===3 ? 'Perfect score! 🎉' : 'Review the cards and try again!');
+  });
+</script>
+</body>
+</html>
